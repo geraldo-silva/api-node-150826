@@ -1,52 +1,52 @@
-<div align="center">
+Formula One API
 
-  <img src="./.github/assets/blue-saiyan-bg.png" alt="Logo" height="200">
-  <h1 align="center"><strong>NODE BOILERPLATE - BLUE EDITION</strong></h1>
-  <p align="center">
-	  Don't start a new Node project from zero!<br> Use this simple <b>Nodejs</b> boilerplate with pre-configured <b>Typescript</b> in a modern way.
-  </p>
+API Node.js com Fastify e TypeScript, implementada com arquitetura em camadas mínimas.
 
-</div>
+Tecnologias
 
-<br />
+- Node.js v20+
+- TypeScript v5.4
+- Fastify v4.26
+- CORS
 
-  <!-- Badges -->
-<div align="center">
-  
-  [![TypeScript version][ts-badge]][typescript-5-4]
-  [![Node.js version][nodejs-badge]][nodejs]
+Arquitetura em Camadas
 
-</div>
+src/
+  types/           Definição de interfaces e tipos (Team, Driver)
+  data/            Dados mock ou modelos (teams.data, drivers.data)
+  repositories/    Camada de acesso aos dados (TeamsRepository, DriversRepository)
+  services/        Lógica de negócio (TeamsService, DriversService)
+  routes/          Endpoints da API (teams.routes, drivers.routes)
+  config/          Configuração do servidor (server.ts)
+  server.ts        Ponto de entrada da aplicação
 
-# 🚀 Technologies
+Estrutura das Camadas
 
-This code source was developed with the following items:
+Data Layer: Armazena os dados brutos (atualmente em memória)
+Repository Layer: Interface entre dados e regras de negócio
+Service Layer: Contém a lógica de negócio e validações
+Routes Layer: Define os endpoints HTTP da API
 
-### 📦 Dependencies
+Scripts
 
-- [typescript][typescript-npm] - Superset for application scale JavaScript development
-- [tsx][tsx-npm] - TypeScript Execute (tsx): Enable Node.js to run TypeScript
-- [tsup][tsup-npm] - Bundle your TypeScript library with no config, powered by esbuild
-- [@types/node][@types/node-npm] - type definitions for node
+npm run dist       Compila TypeScript para JavaScript
+npm run start:dev  Inicia o servidor em modo desenvolvimento
+npm run start:watch Inicia com auto-reload em alterações
+npm run start:dist Compila e executa a versão compilada
 
-### 📄 Files
+Endpoints
 
-- `.gitignore` - Ignore folders like node_modules
-- `.env` - Enviroment variables
-- `tsconfig.json` - Typescript configure Options
+GET /teams          Lista todas as equipes
+GET /teams/:id      Obtém uma equipe específica
+GET /drivers        Lista todos os pilotos
+GET /drivers/:id    Obtém um piloto específico
 
-### ⚡ Scripts
+Como Usar
 
-- `npm run dist`: Compiles TypeScript files to JavaScript in the dist directory.
-- `npm run start:dev`: Runs the server in development mode with environment variables loaded from the .env file.
-- `npm run start:watch`: Runs the server in development mode with support for automatic reload on file changes.
-- `npm run start:dist`: Compiles the project and runs the compiled version from the dist directory.
-
-# 👨‍💻 How To Use
-
-click in **[Use this template]** OR
-
-To clone and run this application, you'll need [Git](https://git-scm.com), [Node.js v20+](https://nodejs.org/en/) + [NPM v10+](https://nodejs.org/en/) installed on your computer. From your command line:
+1. Clone o repositório
+2. Instale as dependências: npm install
+3. Inicie o servidor: npm run start:dev
+4. Acesse http://localhost:3333
 
 ```bash
 # Clone this repository
