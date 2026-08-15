@@ -48,19 +48,6 @@ Como Usar
 3. Inicie o servidor: npm run start:dev
 4. Acesse http://localhost:3333
 
-```bash
-# Clone this repository
-$ git clone https://github.com/felipeAguiarCode/node-blue-boilerplate
-
-# Go into the repository
-$ cd node-blue-boilerplate
-
-# Install dependencies
-$ npm install
-```
-
 # Credits
 
-icons by [Pino Lamanna][dribble-icon]
-
-[dribble-icon]: https://dribbble.com/Schakalwal
+Projeto base: $ git clone https://github.com/felipeAguiarCode/node-blue-boilerplate
